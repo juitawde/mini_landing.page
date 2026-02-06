@@ -20,7 +20,10 @@
 
         <div class="nav-actions">
             <button class="btn">Login</button>
-            <button class="btn theme-toggle" id="themeToggle">Dark/Light Mode</button>
+            <select class="theme-select" id="themeSelect">
+                <option value="dark">Dark</option>
+                <option value="light">Light</option>
+            </select>
         </div>
     </nav>
 
@@ -64,12 +67,15 @@
     </footer>
 
     <script>
-        const toggleBtn = document.getElementById("themeToggle");
+        const themeSelect = document.getElementById("themeSelect");
 
-        toggleBtn.addEventListener("click", () => {
-        document.body.classList.toggle("dark-theme");
-      });
-
+themeSelect.addEventListener("change", () => {
+    if (themeSelect.value === "dark") {
+        document.body.classList.add("dark-theme");
+    } else {
+        document.body.classList.remove("dark-theme");
+    }
+});
     </script>
 </body>
 </html>

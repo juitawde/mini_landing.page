@@ -100,6 +100,16 @@ body {
     background-color: var(--secondary-color);
 }
 
+.theme-select {
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: var(--space-sm);
+    border-radius: var(--border-radius);
+    border: none;
+    font-size: var(--base-font-size);
+    cursor: pointer;
+}
+
 /* Theme Toggle Button */
 .theme-toggle {
     background-color: var(--secondary-color);
